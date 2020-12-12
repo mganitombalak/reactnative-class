@@ -12,3 +12,25 @@ export const initDb = () => {
         });
     });
 }
+
+export const insertData=(firstName,lastName,lat,lng)=>{
+    return new Promise((resolve, reject) => {
+        db.transaction(tr => {
+            tr.executeSql('INSERT INTO baro(firstName,lastName,lat,lng) VALUES(?,?,?,?);'
+                , [firstName,lastName,lat,lng],
+                (trx, resultSet) => { resolve(resultSet) },
+                (trx, err) => { reject(err) });
+        });
+    });
+}
+
+export const fetchBaroData=()=>{
+    return new Promise((resolve, reject) => {
+        db.transaction(tr => {
+            tr.executeSql('SELECT * FROM baro;'
+                , [],
+                (trx, resultSet) => { resolve(resultSet) },
+                (trx, err) => { reject(err) });
+        });
+    });
+}
