@@ -7,6 +7,7 @@ import NewsReducer  from './store/reducer/news';
 import CategoryReducer  from './store/reducer/category';
 import {Provider} from 'react-redux';
 import ReduxThunk from 'redux-thunk';
+import { enableScreens } from 'react-native-screens';
 const rootReducers = combineReducers({
   news:NewsReducer,
   category:CategoryReducer
@@ -21,7 +22,7 @@ const loadFonts = () => {
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
-
+  enableScreens();
   if(!fontsLoaded){
     return <AppLoading startAsync={loadFonts} onFinish={()=>setFontsLoaded(true)}></AppLoading>
   }

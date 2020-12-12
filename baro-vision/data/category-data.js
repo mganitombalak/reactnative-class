@@ -6,5 +6,5 @@ export const Categories=[
     new Category(3,"Avukat",'#FFFF00'),
     new Category(4,"Dosya Takip",'#00FF00'),
     new Category(5,"Sozluk",'#00FFFF'),
-    new Category(6,"E-Arzuhal",'#FF00FF')
+    new Category(6,"Kamera",'#FF00FF')
 ];

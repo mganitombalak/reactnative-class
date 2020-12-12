@@ -12,6 +12,7 @@ import CommanDetail from '../screens/CommonDetail';
 import NewsDetailScreen from '../screens/NewsDetail';
 import Favorites from '../screens/Favorites';
 import { MaterialIcons } from '@expo/vector-icons';
+import CameraScreen from '../screens/CameraScreen';
 const defaultNavOptions = {
     headerStyle: {
         backgroundColor: Platform.OS === 'android' ? Colors.red : Colors.white
@@ -23,7 +24,9 @@ const defaultNavOptions = {
 const CategoryStackNavigator = createStackNavigator({
     Category: CategoryScreen,
     News: NewsScreen,
-    NewsDetail: NewsDetailScreen
+    NewsDetail: NewsDetailScreen,
+    Camera: CameraScreen
+
 },
     {
         // initialRouteName:'News',
