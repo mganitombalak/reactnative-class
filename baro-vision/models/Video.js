@@ -1,4 +1,3 @@
-
 class Video {
     constructor(id, title, videoUrl,categoryName,date,commissionName,thumbUrl) {
         this.id = id;

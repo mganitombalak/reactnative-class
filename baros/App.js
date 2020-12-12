@@ -6,7 +6,7 @@ import InputGroup from './components/InputGroup';
 export default function App() {
   const [todos, setTodos] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
-  console.log(todos);
+  // console.log(todos);
   const updateTodos = item => {
     setTodos(previousState => [...previousState, { itemId: Math.random().toString(), value: item }]);
     setIsModalVisible(false);

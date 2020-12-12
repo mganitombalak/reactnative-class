@@ -7,26 +7,24 @@ import NewsItem from '../components/NewsItem';
 import {selectNews,loadNews} from '../store/action/news';
 const News = props => {
     const videos = useSelector(state => state.news.videos);
-    // const selectedVideo = useSelector(state => state.news.selectedVideo);
     const dispatch = useDispatch();
     const selectHandler = (id) => {
         dispatch(selectNews(id));
-        // console.log(`dispatched:${id}`);
         props.navigation.navigate('NewsDetail');
     }
 
     useEffect(()=>{
        dispatch(loadNews());
     },[]);
-    const content = videos.length>0? <FlatList style={styles.screen} data={videos} renderItem={data =>
+    
+    return <FlatList style={styles.screen} data={videos} renderItem={data =>
         <NewsItem key={data.item.id.toString()}
             id={data.item.id}
             header={data.item.categoryName}
             body={data.item.title}
             thumbUrl={data.item.thumbUrl}
             onSelect={selectHandler} />
-    } />:<View><Text>No Data</Text></View>
-    return <>{content}</>;
+    } />
 };
 
 News.navigationOptions = navigationInfo => {
