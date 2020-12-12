@@ -26,7 +26,7 @@ const SQLScreen = () => {
                 setIsGettingLocData(true);
                 const locData = await LocationService.getCurrentPositionAsync({
                     timeInterval: 5000,
-                    accuracy: 4
+                    accuracy: 4,
                 });
                 console.log(locData);
             } catch (err) {
