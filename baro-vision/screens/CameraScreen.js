@@ -28,8 +28,8 @@ const CameraScreen = props => {
             const fileName = imageResult.uri.split('/').pop();
             const picPath = FileSystem.documentDirectory + fileName;
             console.log(`Moved file:${picPath}`);
-            await FileSystem.moveAsync({from:imageResult.uri,to:picPath});
-            setSelectedImage(picPath);            
+            await FileSystem.moveAsync({ from: imageResult.uri, to: picPath });
+            setSelectedImage(picPath);
         }
     };
     return (<View>

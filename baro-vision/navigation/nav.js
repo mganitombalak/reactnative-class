@@ -13,6 +13,7 @@ import NewsDetailScreen from '../screens/NewsDetail';
 import Favorites from '../screens/Favorites';
 import { MaterialIcons } from '@expo/vector-icons';
 import CameraScreen from '../screens/CameraScreen';
+import SQLScreen from '../screens/SQLScreen';
 const defaultNavOptions = {
     headerStyle: {
         backgroundColor: Platform.OS === 'android' ? Colors.red : Colors.white
@@ -25,7 +26,8 @@ const CategoryStackNavigator = createStackNavigator({
     Category: CategoryScreen,
     News: NewsScreen,
     NewsDetail: NewsDetailScreen,
-    Camera: CameraScreen
+    Camera: CameraScreen,
+    SQL: SQLScreen,
 
 },
     {

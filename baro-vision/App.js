@@ -8,6 +8,8 @@ import CategoryReducer  from './store/reducer/category';
 import {Provider} from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import { enableScreens } from 'react-native-screens';
+import {}
+
 const rootReducers = combineReducers({
   news:NewsReducer,
   category:CategoryReducer
